@@ -1,0 +1,136 @@
+https://www.dataversity.net/generally-accepted-data-modeling-principles/
+
+Accounting Equation
+	Assets = Liabilities + Equity
+
+Accounting Classification Groups
+	Assets: values the entity owns
+	Liabilities: debt the entity owes
+	Equity: keeping track of owner(s)
+	Revenue: keeping track of income
+	Expense: keeping track of operating expense
+
+
+
+
+
+https://blog.journalize.io/posts/an-elegant-db-schema-for-double-entry-accounting/
+
+
+https://www.datarails.com/account-reconciliation/#:~:text=There%20are%20five%20primary%20types,keep%20your%20balances%20in%20order.
+Account Reconciliation
+	Compares third-party and independent statements and records with internal records and ledgers
+	Causes for discrepancies
+		Missing invoices
+		Unrecorded transactions
+		Fake checks
+		Misuse of funds
+
+Types of Account Reconciliation
+	Bank
+	Vendor
+	Business-specific
+	Intercompany
+	Customer
+	
+Bank Reconciliation
+	Bank Statement
+		Starting balance
+		Transactions (Payments and Earnings)
+		Ending balance
+	GL Cash
+		Cash account activity and balance change for time period
+
+Vendor Reconciliation
+	Vendor Statement
+		Amount paid for product or service
+	GL AP
+		Amount recorded for product or service
+
+Business-specific Reconciliation
+	Compare internal records at start and end of financial cycle to internal records
+	
+Intercompany Reconciliation	
+	Parent company looks for differences within and between any two subsidiaries
+	Identify which assets belong to which subsidiary
+
+Customer Reconciliation
+	Compare invoices sent to customers to GL AR ledger
+	Analyze credit terms, amounts received, and amounts unpaid
+	
+	
+	
+	
+https://www.spiceworks.com/tech/innovation/guest-article/3-reasons-why-month-end-reconciliation-automation-is-key-for-businesses/
+
+RPA (Robotic Process Automation)
+	
+	
+	
+	
+https://www.accountingtools.com/articles/what-is-the-difference-between-a-journal-and-a-ledger.html
+
+Journal
+	Detail-level information for individual transactions
+	
+Ledger
+	Journal data is aggregated and posted in ledger
+	
+
+
+		
+		
+		
+https://docs.getdbt.com/blog/financial-modeling-accounting-principles
+
+Financial Data Model
+		Understand Source Schema
+		Generate GL Transaction Detail Report
+		Verfiy Account Classification
+		GL by Period and Date Spine
+		Retained Earnings/Adjusted Income
+		Finish GL by Period Model
+		Generate Balance Sheet
+		Generate P&L
+		
+Understand Source Schema
+	Most financial data sources are structured either one of two ways:
+		single talbe that contains all transactions
+		header and line item detail table for each transaction type
+		
+Generate GL Transaction Detail Report
+	Each transaction will detail how the entry impacts the bottom line as a debit or credit to relevant account
+	Includes the offesetting entry
+	Can join dimensional fields like vendor name, account name, account type, account classification
+	
+Verfiy Account Classification
+	Classify GL account as one of following:
+		Asset
+		Liability
+		Equity
+		Expense
+		Revenue
+		
+GL by Period and Date Spine
+	Add beginning of month date and end of month date to GL data
+	Date range is between minimum and maximum transaction dates in GL data
+	Aggregate GL data by month
+	Add cumulative balance for balance sheet accounts (asset, liability, equity)
+	Add a beginning and ending balance for balance sheet accounts using cumulative balance
+	Add net change for all accounts
+		0 for empty records
+	
+	
+
+
+
+
+	
+	
+	
+	
+	
+	
+
+		
+		
